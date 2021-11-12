@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+<table class="table" id="table">
+
+</table>
+<button onclick="load_data()">Load data</button>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    var data = [
+    	{
+    		thoi_gian_ung: "2021-11-06 18:42:24",
+    		thoi_gian_goi_ung: "2021-11-06 18:42:24",
+    		gia_goi_ung: "1200",
+    		luu_luong_ung: "50",
+
+    	},
+    	{
+    		thoi_gian_ung: "2021-11-06 123456",
+    		thoi_gian_goi: "2021-11-06 123456",
+    		gia_goi_ung: "1300",
+    		luu_luong_ung: "60",
+
+    	}
+    ]
+    var tieu_de =[
+        {
+            thoi_gian_ung :"Thời gian ứng",
+            thoi_gian_goi_ung: "Thời gian gói ứng",
+            gia_goi_ung:"Giá gói ứng",
+            luu_luong_ung:"Lưu lượng gói"
+        }
+    ]
+    var sOut = "<tr>";
+    console.log(data.length)
+    for(var i =0;i<data.length;i++)
+    {
+
+    	for (keys in data[i])
+    		sOut += "<td>" + data[i][keys] + "</td>"
+
+    	sOut += "</tr>";
+    }
+
+    $("#table").append(sOut)
+
+</script>
+
+</body>
+
+</html>
